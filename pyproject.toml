@@ -8,3 +8,7 @@ exclude = '''
 [tool.isort]
 profile = "black"
 multi_line_output = 3
+
+[tool.mypy]
+exclude = "(tests|venv|docker|configuration|docs)"
+ignore_missing_imports = true

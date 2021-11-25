@@ -43,6 +43,10 @@ jobs:
     - name: "Isort check"
       run: |
         sudo docker exec intelowl_uwsgi isort . --profile black --filter-files --check-only --diff --skip configuration/ldap_config.py
+    - name: "Check mypy"
+      run: |
+        sudo docker exec intelowl_uwsgi mypy .
+      shell: bash
     - name: "Test: API"
       run: |
         sudo docker/scripts/coverage_test.sh tests.test_api tests.test_auth

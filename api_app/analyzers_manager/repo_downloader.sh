@@ -7,6 +7,10 @@
 # Example: you may want to add a new repository. Add the clone here
 # Example: you may want to remove some of the rules available in the downloaded repositories. Remove them here.
 
+
+# This script can be disabled during development using REPO_DOWNLOADER_ENABLED=true env variable
+if [ "$REPO_DOWNLOADER_ENABLED" = "false" ]; then echo "Skipping repo_downloader.sh in DEVELOPMENT mode"; exit 0;  fi
+
 cd /opt/deploy/yara
 
 # Intezer rules
@@ -32,6 +36,10 @@ git clone --depth 1 https://github.com/StrangerealIntel/DailyIOC daily_ioc_rules
 
 # FireEye
 git clone --depth 1 https://github.com/fireeye/red_team_tool_countermeasures fireeye_rules
+
+# ATM Malware
+git clone --depth 1 https://github.com/fboldewin/YARA-rules atm_malware_rules
+rm -fr atm_malware_rules/*.md
 
 # Yara community rules
 git clone --depth 1 https://github.com/Yara-Rules/rules.git

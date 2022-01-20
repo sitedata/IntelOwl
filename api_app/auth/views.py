@@ -49,12 +49,8 @@ class LogoutView(durin_views.LogoutView):
         return super(LogoutView, self).post(request, format=None)
 
 
-class APIAccessTokenView(durin_views.APIAccessTokenView):
-    pass
-
-
-class TokenSessionsViewSet(durin_views.TokenSessionsViewSet):
-    pass
+APIAccessTokenView = durin_views.APIAccessTokenView
+TokenSessionsViewSet = durin_views.TokenSessionsViewSet
 
 
 class DurinAuthenticationScheme(OpenApiAuthenticationExtension):

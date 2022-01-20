@@ -16,7 +16,7 @@ drf-flex-fields == 0.9.6
 djangorestframework-filters == 1.0.0.dev2
 drf-spectacular == 0.21.1
 
-git+https://github.com/certego/certego-saas.git@7a464e15813125ec33c49d5fcf3b75e13f191a09#egg=certego_saas
+git+https://github.com/certego/certego-saas.git@4e0bfe4070c747262e21ae9bbce0adb9a4dabbea#egg=certego_saas
 git+https://github.com/jazzband/django-silk.git#egg=django-silk
 
 # infra

@@ -43,7 +43,6 @@ export default function UserMenu(props) {
         {/* Invitations */}
         <DropdownItem
           tag={RRNavLink}
-          exact
           to="/me/organization"
           activeClassName="nav-link-active"
         >
@@ -53,7 +52,6 @@ export default function UserMenu(props) {
         {/* API Access/Sessions */}
         <DropdownItem
           tag={RRNavLink}
-          exact
           to="/me/sessions"
           activeClassName="nav-link-active"
         >

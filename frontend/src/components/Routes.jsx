@@ -9,7 +9,7 @@ const publicRoutesLazy = [
   {
     path: "/",
     exact: true,
-    component: React.lazy(() => import("./Home/Home")),
+    component: React.lazy(() => import("./home/Home")),
   },
 ];
 

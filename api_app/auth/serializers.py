@@ -1,11 +1,12 @@
 # This file is a part of IntelOwl https://github.com/intelowlproject/IntelOwl
 # See the file 'LICENSE' for copying permission.
 
+from rest_framework import serializers as rfs
+
 from certego_saas.models import User
 from certego_saas.user.serializers import (
     UserAccessSerializer as CertegoUserAccessSerializer,
 )
-from rest_framework import serializers as rfs
 
 from ..models import Job
 

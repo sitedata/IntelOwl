@@ -1,13 +1,11 @@
 import "./Home.scss";
 
 import React from "react";
-import { Container, Button } from "reactstrap";
-import useHoverDirty from "react-use/lib/useHoverDirty";
+import { Container } from "reactstrap";
 
 import { ContentSection } from "@certego/certego-ui";
 
 import { PUBLIC_URL, VERSION } from "../../constants/environment";
-import { SvgScrollDownArrow } from "./utils";
 
 // constants
 const versionText = VERSION;
@@ -44,19 +42,6 @@ const blogPosts = [
 export default function Home() {
   console.debug("Home rendered!");
 
-  // tracks whether user is hovering over btnRef element or not
-  const btnRef = React.useRef(null);
-  const isHovering = useHoverDirty(btnRef);
-
-  // callbacks
-  const scrollToContent = React.useCallback(() => {
-    const target = document.getElementById("home__bgImg");
-    window.scroll({
-      behavior: "smooth",
-      top: target.offsetHeight,
-    });
-  }, []);
-
   return (
     <>
       {/* BG Image */}
@@ -68,15 +53,9 @@ export default function Home() {
         >
           {versionText}
         </h2>
-        <div id="home__svgArrow">
-          <SvgScrollDownArrow
-            className={isHovering ? "animatedArrow-container-hover" : null}
-            onClick={scrollToContent}
-          />
-        </div>
       </Container>
       {/* Content */}
-      <Container id="home__content" className="mt-5">
+      <Container id="home__content" className="mt-2">
         <ContentSection className="bg-body shadow lead">
           Intel Owl is an Open Source Intelligence, or OSINT solution to get
           threat intelligence data about a specific file, an IP or a domain from

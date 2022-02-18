@@ -43,3 +43,8 @@ SPECTACULAR_SETTINGS = {
     "TITLE": "IntelOwl API specification",
     "VERSION": VERSION,
 }
+
+# drf-recaptcha (not used in IntelOwl but required by certego-saas pkg)
+DRF_RECAPTCHA_SECRET_KEY = ""
+DRF_RECAPTCHA_TESTING = True
+DRF_RECAPTCHA_TESTING_PASS = True

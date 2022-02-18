@@ -1,12 +1,13 @@
 # This file is a part of IntelOwl https://github.com/intelowlproject/IntelOwl
 # See the file 'LICENSE' for copying permission.
 
-from certego_saas.user.admin import AbstractUserAdmin
-from certego_saas.user.models import User
 from django.conf import settings
 from django.contrib import admin
 from durin.admin import AuthTokenAdmin
 from durin.models import AuthToken, Client
+
+from certego_saas.user.admin import AbstractUserAdmin
+from certego_saas.user.models import User
 
 # certego-saas
 

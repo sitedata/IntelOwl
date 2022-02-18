@@ -5,9 +5,6 @@ import logging
 from datetime import timedelta
 from typing import Union
 
-from certego_saas.ext.helpers import cache_action_response, parse_humanized_range
-from certego_saas.ext.mixins import SerializerActionMixin
-from certego_saas.ext.viewsets import ReadAndDeleteOnlyViewSet
 from django.conf import settings
 from django.db.models import Count, Q
 from django.db.models.functions import Trunc
@@ -21,6 +18,9 @@ from rest_framework.decorators import action, api_view
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 
+from certego_saas.ext.helpers import cache_action_response, parse_humanized_range
+from certego_saas.ext.mixins import SerializerActionMixin
+from certego_saas.ext.viewsets import ReadAndDeleteOnlyViewSet
 from intel_owl.celery import app as celery_app
 
 from .analyzers_manager import controller as analyzers_controller

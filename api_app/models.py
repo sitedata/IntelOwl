@@ -3,7 +3,6 @@
 
 import hashlib
 
-from certego_saas.models import User
 from django.conf import settings
 from django.contrib.postgres import fields as pg_fields
 from django.db import models
@@ -12,6 +11,7 @@ from django.utils import timezone
 from django.utils.functional import cached_property
 
 from api_app.core.models import Status as ReportStatus
+from certego_saas.models import User
 
 
 def file_directory_path(instance, filename):
